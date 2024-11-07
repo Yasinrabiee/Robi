@@ -17,6 +17,7 @@ let dirs = [`left`, `top`, `right`, `bottom`];
 let level = 0;
 let robiPosition = levels[level].robiPosition;
 let robiDir = levels[level].robiDir;
+let dark = levels[level].dark[0];
 let cellWidth = $(`#cell-0`).width();
 prepareBoard(level);
 
@@ -72,6 +73,11 @@ function run(command) {
 				robiDir -= 3
 			}
 			$(`#robi`).css({transform: `rotate(${90 * robiDir})`});
+			break;
+		case 'takeSun();':
+			if ($(`#robi`).position() == $(`#cell-${dark}`).position()) {
+				alert(true);
+			}
 			break;
 	}
 }
