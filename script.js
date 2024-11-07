@@ -75,8 +75,9 @@ function run(command) {
 			$(`#robi`).css({transform: `rotate(${90 * robiDir})`});
 			break;
 		case 'takeSun();':
-			if ($(`#robi`).position() == $(`#cell-${dark}`).position()) {
-				alert(true);
+			if ($(`#robi`).position().left == 708.1437377929688 && $(`#robi`).position().top == 360.8687553405762) {
+				alert(`Sun taked`);
+				$(`#cell-74`).removeClass(`sun`);
 			}
 			break;
 	}
