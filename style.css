@@ -1,0 +1,161 @@
+:root {
+	--bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-primary-text-emphasis: #052c65;
+    --bs-secondary-text-emphasis: #2b2f32;
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: #58151c;
+    --bs-light-text-emphasis: #495057;
+    --bs-dark-text-emphasis: #495057;
+    --bs-primary-bg-subtle: #cfe2ff;
+    --bs-secondary-bg-subtle: #e2e3e5;
+    --bs-success-bg-subtle: #d1e7dd;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+/*	background-color: black;*/
+}
+
+#container {
+	margin: 0 auto;
+	display: grid;
+	width: 500px;
+	gap: 8px;
+}
+
+#board {
+	width: 100%;
+	aspect-ratio: 1;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	border: solid black 1px;
+}
+
+#container textarea {
+	min-height: 200px;
+	direction: ltr;
+}
+
+.cell {
+	border: solid silver 1px;
+	color: silver;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.obstacles {
+	background-color: teal;
+}
+
+.sun {
+	background: radial-gradient(yellow, white);
+}
+
+.dark {
+	background: radial-gradient(gray, white);
+}
+
+#robi {
+	position: absolute;
+	background-image: url('images/robi.png');
+	background-size: cover;
+}
+
+.left {
+	transform: rotate(270deg);
+}
+
+.top {
+	transform: rotate(0deg);
+}
+
+.right {
+	transform: rotate(90deg);
+}
+
+.bottom {
+	transform: rotate(0deg);
+}
+
+.form-control {
+	display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #FFF;
+    background-clip: padding-box;
+    border: 1px solid #DEE2E6;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+	color: #212529;
+	background-color: #FFF;
+	border-color: #86B7FE;
+	outline: 0;
+	box-shadow: 0 0 0 .25rem rgba(255, 0, 0, .3);
+}
+
+#run {
+	background-color: var(--bs-yellow);
+	border: none;
+	outline: none;
+	color: white;
+	border-radius: 3px;
+	display: inline-block;
+	font-weight: bold;
+}
